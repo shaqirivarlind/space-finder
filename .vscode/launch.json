@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Local File",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${relativeFile}"
+      ],
+      "env": {
+//        "AWS_PROFILE": "udemy",
+        "AWS_REGION": "eu-central-1",
+        "TABLE_NAME": "SpacesTable.0aa1897fb8ff"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+@url = https://tr9b1xhaqk.execute-api.eu-central-1.amazonaws.com/prod/
+@token = eyJraWQiOiI5NkNxeUdSaWpPdEczb3JlSEM5SU1jeU5VUUNaZVBlelZFK204U0xINm44PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJjM2Y0Zjg4Mi1mMDExLTcwZWItNjgxMi1hYmJiYWU2NGY0M2EiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiY29nbml0bzpwcmVmZXJyZWRfcm9sZSI6ImFybjphd3M6aWFtOjoyMzQ1NDI1NTQxMTk6cm9sZVwvQXV0aFN0YWNrLUNvZ25pdG9BZG1pblJvbGU0QzEwRkJBNC1TMW5NTFZadWt1VG0iLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtY2VudHJhbC0xLmFtYXpvbmF3cy5jb21cL2V1LWNlbnRyYWwtMV80RWw1ZXhYUEQiLCJjb2duaXRvOnVzZXJuYW1lIjoiZG5pbHJhIiwib3JpZ2luX2p0aSI6ImE4ZmJhMzgxLTc0ZTktNDc1YS04MzFjLTYxYjk3MDNkMmQ2MiIsImNvZ25pdG86cm9sZXMiOlsiYXJuOmF3czppYW06OjIzNDU0MjU1NDExOTpyb2xlXC9BdXRoU3RhY2stQ29nbml0b0FkbWluUm9sZTRDMTBGQkE0LVMxbk1MVlp1a3VUbSJdLCJhdWQiOiJjcDJkY3Vvam51MXZjaGFwZnFndnR0azJsIiwiZXZlbnRfaWQiOiIwZDI3NWQ1Yy0wMjljLTQyYTUtOTcyYy1lYzVkYTgxN2Y1MzQiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTc2MDYxNjc0MCwiZXhwIjoxNzYwNjIwMzQwLCJpYXQiOjE3NjA2MTY3NDAsImp0aSI6ImU3MGUyYzI4LTBlYzgtNDUzMi05NThmLTNkODdhNmM4MDVjNyIsImVtYWlsIjoiYXNoYXFpcmlAcml0ZWNoLmNvIn0.Vsa50KyPs31LgpFu7Jx5toVtMsja7due7hEnOWFaUTm7QGVPqNR8zvSYROAv4mdgTPPYfU8oPDA_OWOq_tBUT3acQbvMeWdN7xr7-tL2s6iwUx2nxUe_iattvctMBdptMKwSQNxybjhHHib27FEYBumP5e1huGYqXSJlawU5ouokM7gUFgtFaLgMx2TiPIAt-E5NgSC2gDYhy4UCbdR9V8iLr-MLOtHT8b0ekoJylSA5-ZAmEEU8pI5SK_bfm_KeeHDSraj2vtfttcC9wpVOhbSEeFiYsJYEC8_Tk2LE37iUUpp2pHvXSOZorV2Ds0e-KCxxvwyXNxQFolrtvZVp_g
+
+#GET https://tr9b1xhaqk.execute-api.eu-central-1.amazonaws.com/prod/spaces
+GET {{url}}/spaces
+Authorization: {{token}}
+###
+
+POST https://tr9b1xhaqk.execute-api.eu-central-1.amazonaws.com/prod/spaces
+content-type: application/json
+
+{
+  "location": "Paris"
+}
+####
+
+POST https://tr9b1xhaqk.execute-api.eu-central-1.amazonaws.com/prod/spaces
+content-type: application/json
+
+{
+  "location": "Paris",
+  "name": "Eiffel Tower"
+}
+####
+
+GET https://tr9b1xhaqk.execute-api.eu-central-1.amazonaws.com/prod/spaces?id=12345
+####
+
+GET https://tr9b1xhaqk.execute-api.eu-central-1.amazonaws.com/prod/spaces?id=408ea3db-66cb-478c-a3b7-88418bb51725
+####
+
+PUT https://tr9b1xhaqk.execute-api.eu-central-1.amazonaws.com/prod/spaces
+content-type: application/json
+
+{
+  "location": "Paris2"
+}
+####
+
+PUT https://tr9b1xhaqk.execute-api.eu-central-1.amazonaws.com/prod/spaces?id=408ea3db-66cb-478c-a3b7-88418bb51725
+content-type: application/json
+
+{
+  "name": "Eiffel Tower2"
+}
+####
+
+DELETE https://tr9b1xhaqk.execute-api.eu-central-1.amazonaws.com/prod/spaces?id=12345
+####
+
+DELETE https://tr9b1xhaqk.execute-api.eu-central-1.amazonaws.com/prod/spaces?id=408ea3db-66cb-478c-a3b7-88418bb51725
+####
+
+DELETE {{url}}/spaces
+Authorization: {{token}}
+####
